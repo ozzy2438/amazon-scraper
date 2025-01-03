@@ -77,3 +77,9 @@
 2025-01-03 11:16:03,146 - WDM - INFO - Driver [/Users/osmanorka/.wdm/drivers/geckodriver/mac64/v0.35.0/geckodriver] found in cache
 2025-01-03 11:16:28,374 - scraper.amazon_scraper - INFO - Results saved to data/amazon_products_20250103_111602.csv
 2025-01-03 11:16:28,374 - scraper.amazon_scraper - INFO - Results saved to data/amazon_products_20250103_111602.json
+2025-01-03 11:27:05,740 - WDM - INFO - ====== WebDriver manager ======
+2025-01-03 11:27:06,039 - WDM - INFO - Get LATEST geckodriver version for 133.0 firefox
+2025-01-03 11:27:06,374 - WDM - INFO - Get LATEST geckodriver version for 133.0 firefox
+2025-01-03 11:27:06,433 - WDM - INFO - Driver [/Users/osmanorka/.wdm/drivers/geckodriver/mac64/v0.35.0/geckodriver] found in cache
+2025-01-03 11:27:31,646 - scraper.amazon_scraper - INFO - Results saved to data/amazon_products_20250103_112705.csv
+2025-01-03 11:27:31,648 - scraper.amazon_scraper - INFO - Results saved to data/amazon_products_20250103_112705.json

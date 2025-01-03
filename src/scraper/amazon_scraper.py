@@ -7,6 +7,7 @@ import logging
 import time
 from typing import Dict, List, Optional
 import os
+import re
 
 from selenium import webdriver
 from selenium.webdriver.firefox.service import Service
@@ -119,18 +120,26 @@ class AmazonScraper:
         """Clean text by removing extra whitespace and special characters."""
         if not text or text == "N/A":
             return "N/A"
-        return " ".join(text.split())
+        # Remove multiple spaces and newlines
+        text = " ".join(text.split())
+        # Remove unwanted characters
+        text = text.replace("\\", "").replace("\"", "").strip()
+        return text
 
     def _extract_price(self, soup: BeautifulSoup) -> str:
         """Extract price information using multiple methods."""
         price = "N/A"
         
-        # Method 1: Direct price element
+        # Method 1: Direct price element with common selectors
         price_selectors = [
             'span.a-price span.a-offscreen',
             'span.a-price-whole',
             'span[data-a-color="price"] span.a-offscreen',
-            'span.a-price'
+            'span.a-price',
+            'span.a-color-price',
+            'span.a-price span[aria-hidden="true"]',
+            'span[data-a-strike="true"]',  # For original prices
+            'span.apexPriceToPay span.a-offscreen'  # For deal prices
         ]
         
         for selector in price_selectors:
@@ -147,13 +156,21 @@ class AmazonScraper:
             if elements_with_price:
                 price = elements_with_price[0]['aria-label'].split()[0]
         
-        # Method 3: Look for price in any text content
+        # Method 3: Look for price in any text content with regex pattern
         if price == "N/A":
             price_pattern = r'\$[\d,]+\.?\d{0,2}'
             import re
             price_matches = re.findall(price_pattern, soup.get_text())
             if price_matches:
-                price = price_matches[0]
+                # Get the first valid price
+                for match in price_matches:
+                    try:
+                        # Remove commas and convert to float to validate
+                        float(match.replace('$', '').replace(',', ''))
+                        price = match
+                        break
+                    except ValueError:
+                        continue
         
         return price
 
@@ -171,26 +188,34 @@ class AmazonScraper:
             # Initialize BeautifulSoup for better parsing
             soup = BeautifulSoup(product_element.get_attribute('innerHTML'), 'html.parser')
             
-            # Extract title - try multiple selectors
+            # Extract title with improved selectors and cleaning
             title = "N/A"
             title_selectors = [
                 'h2 a span.a-text-normal',
                 'h2 span.a-text-normal',
                 'span.a-size-medium',
                 'span.a-size-base-plus',
-                'h2 a span'
+                'h2 a span',
+                'a-size-mini a-spacing-none a-color-base s-line-clamp-2',
+                'a-size-base-plus a-color-base a-text-normal'
             ]
             for selector in title_selectors:
                 title_element = soup.select_one(selector)
                 if title_element and title_element.text.strip():
                     title = self._clean_text(title_element.text)
+                    # Remove common unnecessary text
+                    title = re.sub(r'\s*\(.*?\)', '', title)  # Remove parentheses and content
+                    title = re.sub(r'\s*\[.*?\]', '', title)  # Remove brackets and content
+                    title = re.sub(r'\s+', ' ', title)        # Clean up spaces
                     break
             
-            # Extract product link
+            # Extract product link with improved cleaning
             link = "N/A"
             link_selectors = [
                 'h2 a[href]',
-                'a.a-link-normal[href]'
+                'a.a-link-normal[href]',
+                'a[href*="/dp/"]',  # Product detail page links
+                'a[href*="/gp/"]'   # Alternative product page links
             ]
             for selector in link_selectors:
                 link_element = soup.select_one(selector)
@@ -201,66 +226,89 @@ class AmazonScraper:
             # Extract price using the dedicated method
             price = self._extract_price(soup)
             
-            # Extract rating
+            # Extract rating with improved accuracy
             rating = "N/A"
             rating_selectors = [
                 'i.a-icon-star-small span',
                 'i.a-icon-star span',
                 'span[aria-label*="out of 5 stars"]',
-                'span[class*="a-icon-alt"]'
+                'span[class*="a-icon-alt"]',
+                'a[title*="out of 5 stars"]'
             ]
             for selector in rating_selectors:
                 rating_element = soup.select_one(selector)
                 if rating_element:
-                    rating_text = rating_element.get('aria-label', rating_element.text)
-                    rating = rating_text.split()[0]
-                    break
+                    rating_text = rating_element.get('aria-label', '') or rating_element.get('title', '') or rating_element.text
+                    if 'out of 5' in rating_text.lower():
+                        try:
+                            rating = rating_text.split('out of')[0].strip()
+                            float(rating)  # Validate it's a number
+                        except (ValueError, IndexError):
+                            continue
+                        break
             
-            # Extract review count
+            # Extract review count with improved cleaning
             review_count = "0"
             review_selectors = [
                 'span[aria-label*="stars"] + span',
                 'span.a-size-base.s-underline-text',
                 'span[aria-label*="total ratings"]',
-                'span[aria-label*="total reviews"]'
+                'span[aria-label*="total reviews"]',
+                'a[href*="customerReviews"] span'
             ]
             for selector in review_selectors:
                 review_element = soup.select_one(selector)
                 if review_element:
-                    count = review_element.text.strip().replace(',', '')
+                    count = re.sub(r'[^\d]', '', review_element.text.strip())
                     if count.isdigit():
                         review_count = count
                         break
             
-            # Extract delivery information
+            # Extract delivery information with more detail
             delivery = "N/A"
             delivery_selectors = [
                 'span[data-component-type="s-delivery-badge"] span',
                 'span.a-text-bold:not([class*="a-color"])',
                 'span[aria-label*="Delivery"]',
-                'span.a-color-base.a-text-bold'
+                'span.a-color-base.a-text-bold',
+                'div[data-component-type="s-delivery-prediction"]',
+                'span[data-component-type="s-estimated-delivery"]'
             ]
             for selector in delivery_selectors:
                 delivery_element = soup.select_one(selector)
                 if delivery_element:
-                    delivery = self._clean_text(delivery_element.text)
+                    delivery_text = delivery_element.get('aria-label', '') or delivery_element.text
+                    delivery = self._clean_text(delivery_text)
+                    # Extract specific delivery date if available
+                    date_match = re.search(r'(delivery|arrives|get it)\s+by\s+([^\.]+)', delivery.lower())
+                    if date_match:
+                        delivery = f"Delivery by {date_match.group(2).strip().title()}"
                     break
             
-            # Extract stock status
+            # Extract detailed stock status
             stock_status = "In Stock"
             stock_selectors = [
                 'span[aria-label*="stock"]',
                 'span.a-color-price',
-                'span[data-a-color="price"]'
+                'span[data-a-color="price"]',
+                'span[aria-label*="left in stock"]',
+                'span.a-size-base.a-color-price',
+                'span[data-component-type="s-stock-status"]'
             ]
             for selector in stock_selectors:
                 stock_element = soup.select_one(selector)
-                if stock_element and "left in stock" in stock_element.text.lower():
-                    stock_status = self._clean_text(stock_element.text)
+                if stock_element:
+                    status_text = stock_element.get('aria-label', '') or stock_element.text
+                    if "left in stock" in status_text.lower():
+                        stock_status = self._clean_text(status_text)
+                    elif "out of stock" in status_text.lower():
+                        stock_status = "Out of Stock"
+                    elif "only" in status_text.lower() and "left" in status_text.lower():
+                        stock_status = self._clean_text(status_text)
                     break
             
-            # Check if product is sponsored
-            sponsored = bool(soup.select_one('span[data-component-type="s-sponsored-label"], span.s-label-popover-default'))
+            # Check if product is sponsored with improved detection
+            sponsored = bool(soup.select_one('span[data-component-type="s-sponsored-label"], span.s-label-popover-default, span[class*="sponsored"]'))
             
             return {
                 'title': title,
