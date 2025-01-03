@@ -185,29 +185,87 @@ class AmazonScraper:
             Dictionary containing product data or None if extraction fails.
         """
         try:
-            # Initialize BeautifulSoup for better parsing
             soup = BeautifulSoup(product_element.get_attribute('innerHTML'), 'html.parser')
             
-            # Extract title with improved selectors and cleaning
+            # Extract detailed title with all product information
             title = "N/A"
-            title_selectors = [
-                'h2 a span.a-text-normal',
-                'h2 span.a-text-normal',
-                'span.a-size-medium',
-                'span.a-size-base-plus',
-                'h2 a span',
-                'a-size-mini a-spacing-none a-color-base s-line-clamp-2',
-                'a-size-base-plus a-color-base a-text-normal'
-            ]
-            for selector in title_selectors:
-                title_element = soup.select_one(selector)
-                if title_element and title_element.text.strip():
-                    title = self._clean_text(title_element.text)
-                    # Remove common unnecessary text
-                    title = re.sub(r'\s*\(.*?\)', '', title)  # Remove parentheses and content
-                    title = re.sub(r'\s*\[.*?\]', '', title)  # Remove brackets and content
-                    title = re.sub(r'\s+', ' ', title)        # Clean up spaces
-                    break
+            
+            # First try to get the full product title from the product link
+            link_element = soup.select_one('h2 a.a-link-normal')
+            if link_element:
+                title_from_link = link_element.get('title', '') or link_element.text
+                if title_from_link and len(title_from_link.strip()) > 10:  # Ensure it's a meaningful title
+                    title = self._clean_text(title_from_link)
+            
+            # If we didn't get a good title from the link, try other selectors
+            if title == "N/A" or len(title.split()) < 4:
+                title_selectors = [
+                    'h2 a-size-mini a-spacing-none a-color-base s-line-clamp-4',  # Extended product description
+                    '.a-size-medium.a-color-base.a-text-normal',
+                    '.a-size-base-plus.a-color-base.a-text-normal',
+                    'h2 .a-link-normal',
+                    'h2 span',
+                    '.a-text-normal',
+                    '[data-cy="title-recipe"]'
+                ]
+                
+                for selector in title_selectors:
+                    title_elements = soup.select(selector)
+                    for element in title_elements:
+                        # Try to get the most detailed text
+                        title_text = element.get('aria-label', '') or element.get('title', '') or element.text
+                        if title_text and len(title_text.strip()) > len(title):
+                            title = self._clean_text(title_text)
+            
+            # Additional title cleaning and formatting
+            if title != "N/A":
+                # Remove redundant "by Amazon" or similar phrases
+                title = re.sub(r'\s+by Amazon\b', '', title, flags=re.IGNORECASE)
+                
+                # Clean up multiple spaces and special characters
+                title = re.sub(r'\s+', ' ', title)
+                title = title.replace(' ,', ',')
+                
+                # Remove any HTML entities
+                title = re.sub(r'&[a-zA-Z]+;', ' ', title)
+                
+                # Remove duplicate product names
+                parts = title.split('-')
+                if len(parts) > 1:
+                    # Keep only unique parts
+                    unique_parts = []
+                    seen = set()
+                    for part in parts:
+                        cleaned_part = part.strip().lower()
+                        if cleaned_part not in seen and len(cleaned_part) > 0:
+                            seen.add(cleaned_part)
+                            unique_parts.append(part.strip())
+                    title = ' - '.join(unique_parts)
+                
+                # Ensure proper spacing around hyphens
+                title = re.sub(r'\s*-\s*', ' - ', title)
+                
+                # Remove any remaining unnecessary whitespace
+                title = ' '.join(title.split())
+                
+                # If title is still too short, try to get more information from the product card
+                if len(title.split()) < 4:
+                    # Look for additional product details
+                    details_selectors = [
+                        '.a-size-base:not(.a-color-price)',
+                        '.a-color-base:not(.a-color-price)',
+                        '.a-text-normal:not(.a-color-price)'
+                    ]
+                    
+                    additional_info = []
+                    for selector in details_selectors:
+                        for element in soup.select(selector):
+                            text = self._clean_text(element.text)
+                            if text and text not in title and len(text) > 5:
+                                additional_info.append(text)
+                    
+                    if additional_info:
+                        title = f"{title} - {' - '.join(additional_info)}"
             
             # Extract product link with improved cleaning
             link = "N/A"
