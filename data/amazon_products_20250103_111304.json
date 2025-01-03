@@ -1,0 +1,522 @@
+[
+  {
+    "title":"Apple",
+    "product_link":"https:\/\/www.amazon.com\/Apple-MacBook-Laptop-12-core-19-core\/dp\/B0BSHF7LLL",
+    "price":"N\/A",
+    "rating":"4.7",
+    "review_count":"421",
+    "delivery":"Energy efficiency",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"Pre-owned Certified: Electronics",
+    "product_link":"https:\/\/www.amazon.com\/Apple-MacBook-16-Inch-Storage-2-6GHz\/dp\/B08CZT64VP",
+    "price":"N\/A",
+    "rating":"4.1",
+    "review_count":"171",
+    "delivery":"Pre-owned",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"Apple",
+    "product_link":"https:\/\/www.amazon.com\/Apple-MacBook-Laptop-12-core-16-core\/dp\/B0DM6ZP92H",
+    "price":"N\/A",
+    "rating":"4.8",
+    "review_count":"154",
+    "delivery":"N\/A",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"Apple",
+    "product_link":"https:\/\/www.amazon.com\/Apple-MacBook-Laptop-10-core-16-core\/dp\/B0BSHDVBXZ",
+    "price":"N\/A",
+    "rating":"4.7",
+    "review_count":"611",
+    "delivery":"Energy efficiency",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"Apple",
+    "product_link":"https:\/\/www.amazon.com\/Apple-MacBook-Laptop-8-core-10-core\/dp\/B0CM5JLWJK",
+    "price":"N\/A",
+    "rating":"4.6",
+    "review_count":"529",
+    "delivery":"Energy efficiency",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"Apple",
+    "product_link":"https:\/\/www.amazon.com\/Apple-MacBook-2024-16-Core-40-Core-Standard\/dp\/B0DNR92C1W",
+    "price":"N\/A",
+    "rating":"N\/A",
+    "review_count":"0",
+    "delivery":"N\/A",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"Apple",
+    "product_link":"https:\/\/www.amazon.com\/Apple-MacBook-Laptop-11-core-14-core\/dp\/B0CM5JV26D",
+    "price":"N\/A",
+    "rating":"4.7",
+    "review_count":"687",
+    "delivery":"Energy efficiency",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"Apple",
+    "product_link":"https:\/\/www.amazon.com\/Apple-MacBook-Display-12-Core-18-Core\/dp\/B0CPN4WL82",
+    "price":"N\/A",
+    "rating":"5.0",
+    "review_count":"2",
+    "delivery":"N\/A",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"Apple",
+    "product_link":"https:\/\/www.amazon.com\/Apple-MacBook-16-2-14-Core-20-Core\/dp\/B0DNR7SZ88",
+    "price":"N\/A",
+    "rating":"N\/A",
+    "review_count":"0",
+    "delivery":"N\/A",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"Apple",
+    "product_link":"https:\/\/www.amazon.com\/Apple-MacBook-2024-16-Core-40-Core-Standard\/dp\/B0DNRJHZ55",
+    "price":"N\/A",
+    "rating":"N\/A",
+    "review_count":"0",
+    "delivery":"N\/A",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"Apple",
+    "product_link":"https:\/\/www.amazon.com\/Apple-MacBook-16-2-14-Core-20-Core\/dp\/B0DNR9BDDS",
+    "price":"N\/A",
+    "rating":"N\/A",
+    "review_count":"0",
+    "delivery":"N\/A",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"Apple",
+    "product_link":"https:\/\/www.amazon.com\/Apple-2024-MacBook-15-inch-Laptop\/dp\/B0CX23P36M",
+    "price":"N\/A",
+    "rating":"4.8",
+    "review_count":"75",
+    "delivery":"Energy efficiency",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"Pre-owned Certified: Electronics",
+    "product_link":"https:\/\/www.amazon.com\/Apple-MacBook-2-6GHz-9th-gen-processor\/dp\/B07XJZDDC5",
+    "price":"N\/A",
+    "rating":"3.9",
+    "review_count":"20",
+    "delivery":"Pre-owned",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"Apple",
+    "product_link":"https:\/\/www.amazon.com\/Apple-MacBook-2024-16-Core-40-Core-Standard\/dp\/B0DNRCC4M6",
+    "price":"N\/A",
+    "rating":"N\/A",
+    "review_count":"0",
+    "delivery":"N\/A",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"Apple",
+    "product_link":"https:\/\/www.amazon.com\/Apple-MacBook-16-2-Chip-Late\/dp\/B0CRJ1FSKS",
+    "price":"N\/A",
+    "rating":"5.0",
+    "review_count":"1",
+    "delivery":"N\/A",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"N\/A",
+    "product_link":"https:\/\/www.amazon.com\/Apple-MacBook-14-inch-10-core-16-core\/dp\/B09JQWSQK7",
+    "price":"N\/A",
+    "rating":"4.7",
+    "review_count":"2164",
+    "delivery":"N\/A",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"Teryeefi",
+    "product_link":"https:\/\/www.amazon.com\/sspa\/click?ie=UTF8&spc=MTozNjg0NjY0MzE0NjQ2MTE2OjE3MzU4NjMxOTU6c3BfYXRmX25leHQ6MzAwMDIzODgyOTg3MzAyOjowOjo&url=-Teryeefi-A2338-A2289-A2251-Kickstand-dp-B0BZV1X3N2-ref-sr_1_17_sspa-dib-eyJ2IjoiMSJ9.d50QlP2Ch72TvQTjNnTftnqLfMZnYGZnCZg6SilKfnVrr8ALqAN-0VJW_UvLIhMYwlk8AZSwvXbJ26hmj0man_gw1WMDy7dH4bm-boRcWaNVyv1fSZxrRe21riIJCHcqi_pr-qZYVamhVUxLUCTDlp4PRx2ygQ4cgQ1682aI04D2AuD30nI0Bkiu6VgY4uOUOJLA4FNqWbP741SSoYNNqDQNx-CnKjQHs6P2e2o7aiM.Znai_H-B0BqLbJGHEF0kHdYxCv7hGdLRSnXUQ0qRVsQ-dib_tag-se-keywords-Macbook-Pro-qid-1735863195-sr-8-17-spons-xpid-UhVwiqpxT2ACA-sp_csd-d2lkZ2V0TmFtZT1zcF9hdGZfbmV4dA-psc-1",
+    "price":"$29.99",
+    "rating":"4.3",
+    "review_count":"109",
+    "delivery":"Delivery Wed, Jan 15",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"N\/A",
+    "product_link":"https:\/\/www.amazon.com\/sspa\/click?ie=UTF8&spc=MTozNjg0NjY0MzE0NjQ2MTE2OjE3MzU4NjMxOTU6c3BfYXRmX25leHQ6MjAwMDk3NjAyOTQ4Mjk4OjowOjo&url=-Mac-Book-Pro-Charger-Compatible-dp-B0B3DNW8D8-ref-sr_1_18_sspa-dib-eyJ2IjoiMSJ9.d50QlP2Ch72TvQTjNnTftnqLfMZnYGZnCZg6SilKfnVrr8ALqAN-0VJW_UvLIhMYwlk8AZSwvXbJ26hmj0man_gw1WMDy7dH4bm-boRcWaNVyv1fSZxrRe21riIJCHcqi_pr-qZYVamhVUxLUCTDlp4PRx2ygQ4cgQ1682aI04D2AuD30nI0Bkiu6VgY4uOUOJLA4FNqWbP741SSoYNNqDQNx-CnKjQHs6P2e2o7aiM.Znai_H-B0BqLbJGHEF0kHdYxCv7hGdLRSnXUQ0qRVsQ-dib_tag-se-keywords-Macbook-Pro-qid-1735863195-sr-8-18-spons-xpid-UhVwiqpxT2ACA-sp_csd-d2lkZ2V0TmFtZT1zcF9hdGZfbmV4dA-psc-1-smid-ARVE8NURNIMMR",
+    "price":"$27.99",
+    "rating":"4.6",
+    "review_count":"1800",
+    "delivery":"Delivery Wed, Jan 15",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"Apple",
+    "product_link":"https:\/\/www.amazon.com\/Apple-MacBook-16-2-Chip-Late\/dp\/B0CQSX7R4V",
+    "price":"N\/A",
+    "rating":"N\/A",
+    "review_count":"0",
+    "delivery":"N\/A",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"SAMSUNG",
+    "product_link":"https:\/\/www.amazon.com\/SAMSUNG-Processor-Touchscreen-NP940XGK-KG1US-Moonstone\/dp\/B0CQ3RRS23",
+    "price":"$1,149.99",
+    "rating":"4.1",
+    "review_count":"136",
+    "delivery":"Delivery Fri, Jan 17",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"EPEAT",
+    "product_link":"https:\/\/www.amazon.com\/Apple-MacBook-13-inch-256GB-Storage\/dp\/B08N5M7S6K",
+    "price":"N\/A",
+    "rating":"4.8",
+    "review_count":"20870",
+    "delivery":"Energy efficiency",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"EPEAT",
+    "product_link":"https:\/\/www.amazon.com\/Apple-MacBook-16-Inch-Storage-2-3GHz\/dp\/B081FV1Y57",
+    "price":"N\/A",
+    "rating":"4.7",
+    "review_count":"4955",
+    "delivery":"Energy efficiency",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"Apple",
+    "product_link":"https:\/\/www.amazon.com\/Apple-2023-MacBook-Laptop-chip\/dp\/B0D5K39HLR",
+    "price":"N\/A",
+    "rating":"N\/A",
+    "review_count":"0",
+    "delivery":"N\/A",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"Apple",
+    "product_link":"https:\/\/www.amazon.com\/Apple-MacBook-16-2-Chip-Late\/dp\/B0CQSY56F8",
+    "price":"N\/A",
+    "rating":"3.9",
+    "review_count":"3",
+    "delivery":"N\/A",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"Apple",
+    "product_link":"https:\/\/www.amazon.com\/Apple-MacBook-Laptop-14-core-20-core\/dp\/B0DLHDCN6P",
+    "price":"N\/A",
+    "rating":"4.5",
+    "review_count":"59",
+    "delivery":"Energy efficiency",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"Apple",
+    "product_link":"https:\/\/www.amazon.com\/Apple-2024-MacBook-15-inch-Laptop\/dp\/B0DLHN9WYG",
+    "price":"N\/A",
+    "rating":"4.8",
+    "review_count":"517",
+    "delivery":"Energy efficiency",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"Apple",
+    "product_link":"https:\/\/www.amazon.com\/Apple-2022-MacBook-Laptop-chip\/dp\/B0DLHCWH55",
+    "price":"N\/A",
+    "rating":"4.6",
+    "review_count":"803",
+    "delivery":"Energy efficiency",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"Apple",
+    "product_link":"https:\/\/www.amazon.com\/Apple-MacBook-Laptop-16-core-40-core\/dp\/B0DN3JM19J",
+    "price":"N\/A",
+    "rating":"N\/A",
+    "review_count":"0",
+    "delivery":"N\/A",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"Apple",
+    "product_link":"https:\/\/www.amazon.com\/Apple-MacBook-Display-16-Core-40-Core\/dp\/B0CPMZKNYW",
+    "price":"N\/A",
+    "rating":"5.0",
+    "review_count":"4",
+    "delivery":"N\/A",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"Apple",
+    "product_link":"https:\/\/www.amazon.com\/Apple-2024-MacBook-13-inch-Laptop\/dp\/B0DLHG1HML",
+    "price":"N\/A",
+    "rating":"4.6",
+    "review_count":"613",
+    "delivery":"Energy efficiency",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"Apple",
+    "product_link":"https:\/\/www.amazon.com\/Apple-CTO-MacBook-Pro-16\/dp\/B0CPN1TBB8",
+    "price":"N\/A",
+    "rating":"5.0",
+    "review_count":"1",
+    "delivery":"N\/A",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"Apple",
+    "product_link":"https:\/\/www.amazon.com\/Apple-MacBook-Laptop-14-core-30-core\/dp\/B0CM5MKMD4",
+    "price":"N\/A",
+    "rating":"4.7",
+    "review_count":"372",
+    "delivery":"Energy efficiency",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"Apple",
+    "product_link":"https:\/\/www.amazon.com\/Apple-14-MacBook-Pro-Space\/dp\/B0DFF7W3SQ",
+    "price":"N\/A",
+    "rating":"5.0",
+    "review_count":"1",
+    "delivery":"N\/A",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"Apple",
+    "product_link":"https:\/\/www.amazon.com\/Apple-2024-MacBook-15-inch-Laptop\/dp\/B0CX23P9S7",
+    "price":"N\/A",
+    "rating":"4.8",
+    "review_count":"75",
+    "delivery":"Energy efficiency",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"Plugable",
+    "product_link":"https:\/\/www.amazon.com\/sspa\/click?ie=UTF8&spc=MTozOTc3OTI1MTU0NzU3MTU2OjE3MzU4NjMyMDE6c3BfYXRmX25leHQ6MzAwMzY2NDM4MTU0NjAyOjowOjo&url=-Plugable-Universal-Laptop-Docking-Station-Usb-C-Triple-Display-dp-B01FKTZLBS-ref-sr_1_33_sspa-dib-eyJ2IjoiMSJ9.HGwk5tN6Sq0IFEQgyLW7v9oSj5MDk9RY5Q_ufueZqbeGqjEuunz07JowCqg4CPyUZGAtp1DgOK-j_3Wi9F_PtuQBc9ARMtZ8hYXx0zGT5Fk0_Xc_CaOkck0eI0NMqs8PKt0o8NKy3u2wD-mvQFEzDaje6jhU7ULRBwR8-9Kg2vSNDw6Y_GyznFRf8zFUr8yB0dXSL2cG1gQxgjcAgaSrwx2JV3Ypyb2-7t-Aly-WDws.xp5fJhw5OfoEYFUL4Dpe-KvkYAA-FFqbD3FrYxGiUMY-dib_tag-se-keywords-Macbook-Pro-qid-1735863201-sr-8-33-spons-xpid-UhVwiqpxT2ACA-sp_csd-d2lkZ2V0TmFtZT1zcF9hdGZfbmV4dA-psc-1",
+    "price":"$169.95",
+    "rating":"4.4",
+    "review_count":"1295",
+    "delivery":"Delivery Wed, Jan 15",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"BENFEI",
+    "product_link":"https:\/\/www.amazon.com\/sspa\/click?ie=UTF8&spc=MTozOTc3OTI1MTU0NzU3MTU2OjE3MzU4NjMyMDE6c3BfYXRmX25leHQ6MjAwMTQ3NzUxODAwMDk4OjowOjo&url=-DisplayPort-Adapter-Compatible-Microsoft-Projector-dp-B07JDWR6W9-ref-sr_1_34_sspa-dib-eyJ2IjoiMSJ9.HGwk5tN6Sq0IFEQgyLW7v9oSj5MDk9RY5Q_ufueZqbeGqjEuunz07JowCqg4CPyUZGAtp1DgOK-j_3Wi9F_PtuQBc9ARMtZ8hYXx0zGT5Fk0_Xc_CaOkck0eI0NMqs8PKt0o8NKy3u2wD-mvQFEzDaje6jhU7ULRBwR8-9Kg2vSNDw6Y_GyznFRf8zFUr8yB0dXSL2cG1gQxgjcAgaSrwx2JV3Ypyb2-7t-Aly-WDws.xp5fJhw5OfoEYFUL4Dpe-KvkYAA-FFqbD3FrYxGiUMY-dib_tag-se-keywords-Macbook-Pro-qid-1735863201-sr-8-34-spons-xpid-UhVwiqpxT2ACA-sp_csd-d2lkZ2V0TmFtZT1zcF9hdGZfbmV4dA-psc-1",
+    "price":"$9.59",
+    "rating":"4.6",
+    "review_count":"16204",
+    "delivery":"Delivery Wed, Jan 15",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"Apple",
+    "product_link":"https:\/\/www.amazon.com\/Apple-MacBook-16-2-Chip-Late\/dp\/B0D6JBBLCK",
+    "price":"N\/A",
+    "rating":"N\/A",
+    "review_count":"0",
+    "delivery":"N\/A",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"TOBENONE",
+    "product_link":"https:\/\/www.amazon.com\/TobenONE-MacBook-Docking-Ethernet-Displayport\/dp\/B0D9H1KB3P",
+    "price":"$161.99",
+    "rating":"4.8",
+    "review_count":"41",
+    "delivery":"Delivery Wed, Jan 15",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"Apple",
+    "product_link":"https:\/\/www.amazon.com\/Apple-MacBook-Display-16-Core-40-Core\/dp\/B0CPNBBXFR",
+    "price":"N\/A",
+    "rating":"5.0",
+    "review_count":"6",
+    "delivery":"N\/A",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"Apple",
+    "product_link":"https:\/\/www.amazon.com\/Apple-MacBook-Laptop-11-core-14-core\/dp\/B0CP4KZQZX",
+    "price":"N\/A",
+    "rating":"5.0",
+    "review_count":"4",
+    "delivery":"N\/A",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"Apple",
+    "product_link":"https:\/\/www.amazon.com\/Apple-2023-MacBook-Laptop-chip\/dp\/B0C7686169",
+    "price":"N\/A",
+    "rating":"4.8",
+    "review_count":"2248",
+    "delivery":"N\/A",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"Apple",
+    "product_link":"https:\/\/www.amazon.com\/Apple-MacBook-core-Space-Black\/dp\/B0CPN4VWFW",
+    "price":"N\/A",
+    "rating":"4.2",
+    "review_count":"9",
+    "delivery":"N\/A",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"Apple",
+    "product_link":"https:\/\/www.amazon.com\/Apple-MacBook-16-2-Chip-Late\/dp\/B0CQNMZLZQ",
+    "price":"N\/A",
+    "rating":"N\/A",
+    "review_count":"0",
+    "delivery":"N\/A",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"Apple",
+    "product_link":"https:\/\/www.amazon.com\/Apple-MacBook-16-2-Chip-Late\/dp\/B0CRSPNG37",
+    "price":"N\/A",
+    "rating":"N\/A",
+    "review_count":"0",
+    "delivery":"N\/A",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"ASUS",
+    "product_link":"https:\/\/www.amazon.com\/ASUS-Vivobook-Laptop-Neutral-S5406MA-AS96\/dp\/B0CWJZ8HRZ",
+    "price":"$899.49",
+    "rating":"4.1",
+    "review_count":"49",
+    "delivery":"N\/A",
+    "stock_status":"Only 2 left in stock - order soon.",
+    "sponsored":false
+  },
+  {
+    "title":"Microsoft",
+    "product_link":"https:\/\/www.amazon.com\/Microsoft-Surface-Touchscreen-Snapdragon-Sapphire\/dp\/B0CXKY7JYZ",
+    "price":"$969.99",
+    "rating":"4.2",
+    "review_count":"184",
+    "delivery":"Energy efficiency",
+    "stock_status":"Only 3 left in stock - order soon.",
+    "sponsored":false
+  },
+  {
+    "title":"N\/A",
+    "product_link":"https:\/\/www.amazon.com\/KWRNVO-Extension-Extender-Protector-Charging\/dp\/B0D5QDP9RZ",
+    "price":"$33.99",
+    "rating":"4.5",
+    "review_count":"101",
+    "delivery":"Delivery Wed, Jan 15",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"Apple",
+    "product_link":"https:\/\/www.amazon.com\/Apple-MacBook-16-2-Chip-Late\/dp\/B0CS34RWFJ",
+    "price":"N\/A",
+    "rating":"5.0",
+    "review_count":"2",
+    "delivery":"N\/A",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"SAMSUNG",
+    "product_link":"https:\/\/www.amazon.com\/SAMSUNG-Snapdragon-Anti-Glare-Long-Lasting-NP750XQA-KB2US\/dp\/B0D9P7Z33B",
+    "price":"N\/A",
+    "rating":"4.8",
+    "review_count":"11",
+    "delivery":"N\/A",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"N\/A",
+    "product_link":"https:\/\/www.amazon.com\/KEFEYA-Extender-Monitor-Portable-Laptops\/dp\/B0CFKLK9JY",
+    "price":"$109.99",
+    "rating":"4.6",
+    "review_count":"2645",
+    "delivery":"Delivery Wed, Jan 15",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"N\/A",
+    "product_link":"https:\/\/www.amazon.com\/Computer-Notebook-Fingerprint-1920X1080-MINI-HDMI\/dp\/B0DHC8NZND",
+    "price":"$299.99",
+    "rating":"3.9",
+    "review_count":"13",
+    "delivery":"Delivery Fri, Jan 17",
+    "stock_status":"In Stock",
+    "sponsored":false
+  },
+  {
+    "title":"Apple",
+    "product_link":"https:\/\/www.amazon.com\/Apple-2024-MacBook-13-inch-Laptop\/dp\/B0CX261SRT",
+    "price":"N\/A",
+    "rating":"4.5",
+    "review_count":"36",
+    "delivery":"Energy efficiency",
+    "stock_status":"In Stock",
+    "sponsored":false
+  }
+]
