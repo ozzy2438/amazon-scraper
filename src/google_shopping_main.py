@@ -1,6 +1,6 @@
 import os
 import sys
-from scraper.bbc_scraper import BBCScraper
+from scraper.google_shopping_scraper import GoogleShoppingScraper
 
 def check_chromedriver():
     """Check if ChromeDriver is installed."""
@@ -18,30 +18,30 @@ def main():
         check_chromedriver()
         
         print("\n" + "=" * 80)
-        print("BBC Haber Makalesi Toplayıcı".center(80))
+        print("Google Shopping Ürün Toplayıcı".center(80))
         print("=" * 80 + "\n")
         
         # Parametreleri ayarla
-        query = "data science"  # Query'yi data science olarak değiştirdik
-        max_articles = 100      # 100 makale için ayarladık
+        query = "iphone 15"    # Query'yi iPhone 15 olarak değiştirdik
+        max_products = 30    # 30 ürün toplayacak
         
         print(f"Arama Terimi: {query}")
-        print(f"Maksimum Makale Sayısı: {max_articles}")
+        print(f"Maksimum Ürün Sayısı: {max_products}")
         print("-" * 80 + "\n")
         
         # Scraper'ı başlat
-        scraper = BBCScraper()
+        scraper = GoogleShoppingScraper()
         
-        # Haberleri topla
-        articles = scraper.scrape_news(query=query, max_articles=max_articles)
+        # Ürünleri topla
+        products = scraper.scrape_products(query=query, max_products=max_products)
         
-        if articles:
+        if products:
             # Sonuçları kaydet
-            scraper.save_results(articles)
-            print(f"\nToplanan makaleler başarıyla kaydedildi!")
-            print(f"Toplam {len(articles)} makale bulundu.")
+            scraper.save_results(products)
+            print(f"\nToplanan ürünler başarıyla kaydedildi!")
+            print(f"Toplam {len(products)} ürün bulundu.")
         else:
-            print("\nUYARI: Hiç makale bulunamadı!")
+            print("\nUYARI: Hiç ürün bulunamadı!")
             
     except Exception as e:
         print(f"\nHata oluştu: {str(e)}")
@@ -49,8 +49,8 @@ def main():
     finally:
         if scraper:
             print("\nTarayıcı kapatılıyor...")
-            scraper.driver.quit()
+            scraper.close()
             print("İşlem tamamlandı.")
 
 if __name__ == "__main__":
-    main()
+    main() 
